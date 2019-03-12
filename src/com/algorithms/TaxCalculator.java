@@ -5,7 +5,7 @@ import java.text.NumberFormat;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Main {
+public class TaxCalculator {
 
     private static final Scanner scanner = new Scanner(System.in);
 
