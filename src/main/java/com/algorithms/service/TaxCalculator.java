@@ -1,23 +1,16 @@
-package com.algorithms;
+package com.algorithms.service;
+
+import org.springframework.stereotype.Service;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.HashMap;
-import java.util.Scanner;
 
+@Service
 public class TaxCalculator {
 
-    private static final Scanner scanner = new Scanner(System.in);
-
-    public static void main(String[] args) {
-        System.out.println("Enter your yearly salary: ");
-        String arrItem = scanner.nextLine();
-        System.out.println("Your taxes are: $" + calculateTax(arrItem));
-        scanner.close();
-    }
-
-    private static String calculateTax(String pay) {
-        double payInt = Double.parseDouble(pay);
+    public String calculateTax(String yearlySalary) {
+        double payInt = Double.parseDouble(yearlySalary);
         double taxOwed = 0;
 
         HashMap<Double, Range> taxBrackets = initTaxBrackets();
